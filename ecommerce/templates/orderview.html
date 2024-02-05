@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for i in o %}
+<h5>{{u}}</h5>
+<h6>Product Name:{{i.product.name}}</h6>
+<h6>Price:{{i.product.price}}</h6>
+<h6>Address:{{i.address}}</h6>
+<h6>Phone No:{{i.phone}}</h6>
+<h6>Ordered Date:{{i.ordered_date}}</h6>
+<h6>Delivery_Status:{{i.delivery_status}}</h6>
+{% endfor %}
+
+
+{% endblock %}

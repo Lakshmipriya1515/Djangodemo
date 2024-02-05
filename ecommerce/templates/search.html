@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<center xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+    <div class="container-fluid" style="margin-bottom">
+    {% if b %}
+    {% for i in b %}
+
+    <div>
+        <img src="{{i.image.url}}"  height="450px" width="100%" >
+  </div >
+<div class="container-fluid" style="margin-bottom:100px">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.desc}}</p>
+</div>
+
+{% endfor %}
+</div>
+
+
+
+
+
+    {% else %}
+    <b><p>No results found</p></b>
+    {% endif %}
+</center>
+{% endblock %}
